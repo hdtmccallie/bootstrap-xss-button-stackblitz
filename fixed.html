@@ -10,9 +10,9 @@
       href="https://cdn.staticfile.net/twitter-bootstrap/3.4.1/css/bootstrap.min.css"
     />
     <script src="https://cdn.staticfile.net/jquery/2.1.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.1.5/purify.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.1.5/purify.min.js"></script> -->
 
-    <script src="bootstrap.js"></script>
+    <script src="nes-bootstrap.js"></script>
 
     <!--
       Need a visual blank slate?
@@ -38,6 +38,28 @@
           type="button"
         >
           Load XSS Alert
+        </button>
+      </p>
+
+      <p>
+        <button
+          class="btn btn-primary complete-test"
+          data-loading-text="Wait for completion..."
+          data-complete-text="<script>alert('XSS Success')</script>"
+          type="button"
+        >
+          Load XSS Alert - complete text
+        </button>
+      </p>
+
+      <p>
+        <button
+          class="btn btn-xss btn-primary"
+          data-loading-text="Loading..."
+          data-reset-text="<script>alert('XSS Success')</script>"
+          type="button"
+        >
+          Load XSS with Reset Text
         </button>
       </p>
 

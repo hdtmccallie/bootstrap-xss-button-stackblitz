@@ -9,6 +9,17 @@ $(function () {
       });
   });
 
+  $('.complete-test').click(function () {
+    $(this)
+      // .button({ foo: 'bar' })
+      .button('loading')
+      .delay(3000)
+      .queue(function () {
+        $(this).button('complete');
+        $(this).dequeue();
+      });
+  });
+
   $('.string-test').click(function () {
     $(this)
       // .button({ foo: 'bar' })

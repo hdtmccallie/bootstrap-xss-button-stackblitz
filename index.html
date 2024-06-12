@@ -12,7 +12,7 @@
     <script src="https://cdn.staticfile.net/jquery/2.1.1/jquery.min.js"></script>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.1.5/purify.min.js"></script> -->
 
-    <script src="bootstrap.js"></script>
+    <script src="bootstrap-orig.js"></script>
 
     <!--
       Need a visual blank slate?
@@ -20,8 +20,6 @@
     -->
     <link rel="stylesheet" href="styles.css" />
     <script type="module" src="script.js"></script>
-
-    <style></style>
   </head>
   <body>
     <nav>
@@ -39,6 +37,28 @@
           type="button"
         >
           Load XSS Alert
+        </button>
+      </p>
+
+      <p>
+        <button
+          class="btn btn-primary complete-test"
+          data-loading-text="Wait for completion..."
+          data-complete-text="<script>alert('XSS Success')</script>"
+          type="button"
+        >
+          Load XSS Alert - complete text
+        </button>
+      </p>
+
+      <p>
+        <button
+          class="btn btn-xss btn-primary"
+          data-loading-text="Loading..."
+          data-reset-text="<script>alert('XSS Success')</script>"
+          type="button"
+        >
+          Load XSS with Reset Text
         </button>
       </p>
 
@@ -118,6 +138,7 @@
           type="button"
           class="btn btn-primary btn-xss"
           data-loading-text="<img height='30' src='https://cdnjs.cloudflare.com/ajax/libs/galleriffic/2.0.1/css/loader.gif' alt='Loading...' /> <strong>Loading...</strong>"
+          data-complete-text="We're done here"
         >
           Loading with valid image
         </button>
